@@ -1,0 +1,150 @@
+
+CREATE DATABASE PROD_SCHOOL;
+
+USE PROD_SCHOOL;
+
+CREATE TABLE TBLUSU(
+	IDUSU INT PRIMARY KEY auto_increment,
+    TIPUSU INT NOT NULL ,
+    DESCTIPUSU VARCHAR(40) NOT NULL,
+    USUARIO VARCHAR(80) NOT NULL,
+    NOME_COMP VARCHAR(100) NOT NULL,
+    CPF INT NOT NULL,
+    DT_NASC DATE NOT NULL,
+    EMAIL VARCHAR(100) NOT NULL,
+    TELEFONE INT,
+    LOGRADOURO VARCHAR(80),
+    COMPLEMENTO VARCHAR(100),
+    BAIRRO VARCHAR(80),
+    CEP INT,
+    MUNICIPIO VARCHAR(80),
+    UF VARCHAR(10),
+    MATRICULA INT NOT NULL,
+    DT_CAD DATE 
+);
+/*SELECT TIPUSU,DESCTIPUSU,USUARIO,NOME_COMP,CPF,DT_NASC,EMAIL,TELEFONE,LOGRADOURO,COMPLEMENTO,BAIRRO,CEP,MUNICIPIO,UF,MATRICULA,DT_CAD FROM TBLUSU;
+
+SELECT * FROM TBLUSU;
+
+UPDATE TBLUSU SET DT_NASC='2002-05-22' WHERE IDUSU=2;
+
+ TIPUSU = 0 ADMINISTRADOR , TIPUSU = 1 PROFESSOR , TIPUSU = 1 ALUNO*/
+INSERT INTO TBLUSU(TIPUSU,DESCTIPUSU,USUARIO,NOME_COMP,CPF,DT_NASC,EMAIL,TELEFONE,LOGRADOURO,COMPLEMENTO,BAIRRO,CEP,MUNICIPIO,UF,MATRICULA,DT_CAD) 
+	VALUES(1,'ALUNO','TESTE2','TESTE2',00000000118,'2002-01-03','saul.matuzinhos@gmail.com',62911111118,'rua valença qd 47, lote 30','casa 9','pq das nações',74957617,'aparecida de goiania','GO',2022110508	,sysdate()),
+    (3	,	'ALUNO'	,	'dazevedo'	,	'Daniel Azevedo'	,	00000000009	,	'28/04/2005'	,	'daniel.azevedo@gmail.com'	,	62911111119	,	'rua valença qd 47, lote 31',	 'casa 10'	,	'pq das nações'	,	74957618	,	'aparecida de goiania'	,	'GO'	,	2022110509	,	sysdate()),
+	(3	,	'ALUNO'	,	'edias'	,	'Edenilson Dias'	,	00000000010	,	'29/04/2005'	,	'edenilson.dias@gmail.com'	,	62911111120	,	'rua valença qd 47, lote 32	','	 casa 11'	,	'pq das nações'	,	74957619	,	'aparecida de goiania'	,'GO',	2022110510	,	sysdate()),
+	(3	,	'ALUNO'	,	'fferreira'	,	'Frederico Ferreira'	,	00000000011	,	'30/04/2005'	,	'frederico.ferreira@gmail.com'	,	62911111121	,	'rua valença qd 47, lote 33'	,	 'casa 12'	,	'pq das nações'	,	74957620	,	'aparecida de goiania'	,	'GO'	,	2022110511	,sysdate()),
+	(3	,	'ALUNO'	,	'glopes'	,	'Gessione Lopes'	,	00000000012	,	'01/05/2005'	,	'gessione.lopes@gmail.com'	,	62911111122	,	'rua valença qd 47, lote 34	',	' casa 13'	,	'pq das nações'	,	74957621	,	'aparecida de goiania'	,	'GO'	,	2022110512	,	sysdate()),
+	(3	,	'ALUNO'	,	'gmarques'	,	'Gustavo Marques'	,	00000000013	,	'02/05/2005'	,	'gustavo.marques@gmail.com'	,	62911111123	,	'rua valença qd 47, lote 35	',	' casa 14'	,	'pq das nações'	,	74957622	,	'aparecida de goiania'	,	'GO'	,	2022110513	,	sysdate()),
+	(3	,	'ALUNO'	,	'jjoao'	,	'João'	,	00000000014	,	'03/05/2005'	,	'joão.joão@gmail.com'	,	62911111124	,	'rua valença qd 47, lote 36	',	 'casa 15'	,	'pq das nações'	,	74957623	,	'aparecida de goiania'	,	'GO'	,	2022110514	,	sysdate()),
+	(3	,	'ALUNO'	,	'lalbuquerque'	,	'Lucas Albuquerque'	,	00000000015	,	'04/05/2005'	,	'lucas.albuquerque@gmail.com'	,	62911111125	,	'rua valença qd 47, lote 37'	,	 'casa 16'	,	'pq das nações'	,	74957624	,	'aparecida de goiania'	,	'GO'	,	2022110515	,	sysdate()),
+	(3	,	'ALUNO'	,	'malbuquerque'	,	'Matheus Albuquerque'	,	00000000016	,	'05/05/2005'	,	'matheus.albuquerque@gmail.com'	,	62911111126	,	'rua valença qd 47, lote 38'	,	 'casa 17'	,	'pq das nações'	,	74957625	,	'aparecida de goiania'	,	'GO'	,	2022110516	,	sysdate()),
+	(3	,	'ALUNO'	,	'mjesus'	,	'Matheus de Jesus'	,	00000000017	,	'06/05/2005'	,	'matheus.jesus@gmail.com'	,	62911111127	,	'rua valença qd 47, lote 39'	,	' casa 18'	,	'pq das nações'	,	74957626	,	'aparecida de goiania'	,	'GO'	,	2022110517	,	sysdate()),
+	(3	,	'ALUNO'	,	'malves'	,	'Mauro Alves'	,	00000000018	,	'07/05/2005'	,	'mauro.alves@gmail.com'	,	62911111128	,	'rua valença qd 47, lote 40'	,	 'casa 19'	,	'pq das nações'	,	74957627	,	'aparecida de goiania'	,	'GO'	,	2022110518	,	sysdate()),
+	(3	,	'ALUNO'	,	'klogan'	,	'Kevin Logan'	,	00000000019	,	'08/05/2005'	,	'kevin.logan@gmail.com'	,	62911111129	,	'rua valença qd 47, lote 41	',	 'casa 20'	,	'pq das nações'	,	74957628	,	'aparecida de goiania'	,	'GO'	,	2022110519	,	sysdate());
+ 
+
+/*    0,'ADM','hsegger','Hackylla Witoria Figueiredo Segger',00000000001,'20-04-2005','hackylla.segger@gmail.com',62992331842,'rua valença qd 47','lote 24,casa 2','pq das nações',74957610,'aparecida de goiania','GO',2022110501,sysdate()
+      0,'ADM','JLADISLAU','JEAN ROZAL LADISLAU',01471598144,'30-08-2002','jeanrozaltrade@gmail.com',62992331842,'Rua dos mainas','qd 60 lt 21','Parque Floresta',74953255,'Aparecida de Goiania','GO',2022110502,sysdate()
+	  0,'ADM','tconceicao','Tiago Soares da Conceição',00000000003,'22/04/2005','tiago.conceicao@gmail.com',62911111113,'rua valença qd 47, lote 25','casa 4','pq das nações',74957612,'aparecida de goiania','GO',2022110503,sysdate());
+      0,'ADM','mrita','Maria Rita',00000000004,'23/04/2005','maria.rita@gmail.com',62911111114,'rua valença qd 47, lote 26	','casa 5','pq das nações',74957613,'aparecida de goiania','GO',2022110504,sysdate()
+	  1,'PROFESSOR','ppablo','Pablo Sousa',00000000005,'24/04/2005','pablo.pablo@gmail.com',62911111115,'rua valença qd 47, lote 27','casa 6','pq das nações',74957614,'aparecida de goiania','GO',2022110505,sysdate());
+      1,'PROFESSOR','dgomes','Daniel Gomes',00000000006,'25/04/2005','daniel.gomes@gmail.com',62911111116,'rua valença qd 47, lote 28','casa 7','pq das nações',74957615,'aparecida de goiania','GO',2022110506,sysdate());
+      
+*/
+
+/* SELECT * FROM TBLUSU;
+SELECT substring_index(USU.NOME_COMP,' ',1)  FROM TBLUSU USU;
+
+SELECT substring_index(USU.NOME_COMP,' ',-1)  FROM TBLUSU USU;*/
+
+CREATE TABLE TBLMAT(
+	MATRICULA INT UNIQUE NOT NULL ,
+    PRIMEIRO_NOME VARCHAR(50),
+    ULTIMO_NOME VARCHAR(50),
+    TIPUSU INT NOT NULL,
+    IDUSU INT NOT NULL    
+
+);
+
+/* INSERIR DADOS DA TBLMAT SEPARANDO O PRIMEIRO NOME E ULTIMO NOME
+INSERT INTO TBLMAT(MATRICULA,PRIMEIRO_NOME,ULTIMO_NOME,TIPUSU,IDUSU)  (SELECT USU.MATRICULA,substring_index(USU.NOME_COMP,' ',1), substring_index(USU.NOME_COMP,' ',-1), USU.TIPUSU, USU.IDUSU FROM TBLUSU USU);
+
+SELECT * FROM TBLMAT;*/
+
+
+CREATE TABLE TBLFREQ(
+	STATUS BOOLEAN NOT NULL,
+    DT DATE,
+    CONTEUDO VARCHAR(200),
+    JUSTIFICATIVA VARCHAR(200) NOT NULL,
+    IDUSU INT NOT NULL,
+    TIPUSU INT NOT NULL,
+    IDDISPLINA INT NOT NULL,
+    IDTURNO INT NOT NULL,
+	IDSERIE INT NOT NULL
+    
+);
+
+CREATE TABLE TBLSERIE(
+	IDSERIE INT PRIMARY KEY AUTO_INCREMENT,
+    IDDISPLINA INT NOT NULL,
+    IDCRONOGRAMA INT NOT NULL,
+    IDUSU INT NOT NULL,
+    TIPUSU INT NOT NULL,
+    IDTURNO INT NOT NULL
+    
+);
+
+CREATE TABLE TBLTURNO(
+	IDTURNO INT PRIMARY KEY AUTO_INCREMENT,
+    PERIODO VARCHAR(20) NOT NULL,
+    HRINICIO VARCHAR(20) NOT NULL,
+    HRFIM VARCHAR(20) NOT NULL,
+    DTINICIO DATE,
+    DIFIM DATE,
+    IDSERIE INT NOT NULL
+); 
+
+CREATE TABLE TBLATI(
+	IDATIVIDADE INT PRIMARY KEY AUTO_INCREMENT ,
+    RESP_ATIVIDADE VARCHAR(1000) NOT NULL,
+    PRAZO_ENTREGA VARCHAR(80),
+    NOTA DOUBLE,
+    IDDISPLINA INT NOT NULL,
+    IDSERIE INT
+    
+);
+
+CREATE TABLE TBLCRON(
+	IDCRONOGRAMA INT PRIMARY KEY AUTO_INCREMENT,
+    DTINICIO DATE,
+    DIFIM DATE,
+    HRINICIO VARCHAR(20) NOT NULL,
+    HRFIM VARCHAR(20) NOT NULL,
+    IDDISPLINA INT NOT NULL
+    
+);
+
+CREATE TABLE TBLDISCI (
+	IDDISCIPLINA INT PRIMARY KEY AUTO_INCREMENT,
+    NOME_COMP VARCHAR(100) NOT NULL,
+    IDUSU INT NOT NULL,
+    TIPUSU INT NOT NULL,
+    IDSERIE INT NOT NULL,
+    IDCRONOGRAMA INT NOT NULL,
+    IDCHAT INT 
+    
+);
+
+CREATE TABLE TBLCHAT (
+	IDCHAT INT PRIMARY KEY AUTO_INCREMENT,
+    DUVIDAS VARCHAR(200),
+    RESP_DUVIDA VARCHAR(200),
+    NOME_COMP VARCHAR(100),
+	DTINICIO DATE,
+    DIFIM DATE,
+    TIPUSU INT NOT NULL,
+    IDSERIE INT NOT NULL,
+    IDDISCPLINA INT NOT NULL    
+);

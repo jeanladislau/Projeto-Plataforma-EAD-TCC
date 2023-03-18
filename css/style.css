@@ -1,0 +1,395 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background: #F21D2F;
+}
+
+.container-tela{
+    overflow: hidden;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+    height: calc(100vh - 10px);
+}
+
+.cadastro-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+    height: calc(78vh - 10px);
+  
+}
+
+.login-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 90px;
+    left: 0px;
+    top: -10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    vertical-align: middle;
+    box-shadow: 0px 11px 12px -1px rgba(0, 0, 0, 0.25);
+}
+
+.login-navbar-logo{
+    display: flex;
+    width: 100px;
+    height: 84.91px;
+
+}
+
+.login-navbar-logo img{
+    display: flex;
+    width: 100px;
+    height: 84.91px;
+}
+
+.login-navbar-paginacao{
+    font-style:normal;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 11px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    
+    color: #F7AC20;
+}
+
+.login-navbar-btncadastro{
+    width: 150px;
+    height: 50px;
+    left: 1113px;
+    top: 15px;
+    
+    background: #D9D9D9;
+    border-radius: 11px;
+    
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    color: #F21D2F;
+}
+
+.login-navbar-btncadastro a{
+    color: #F21D2F;
+    text-decoration: none;
+}
+
+.login-navbar-btncadastro::before, .login-navbar-btncadastro a:hover{
+    color: #F21D2F;
+}
+
+.login-container{
+    
+    width: 350px;
+    height: 384px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #E8E8E8;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.login-container-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 70px;
+    color: #BF0404;
+
+}
+
+.login-container-usuario input, .login-container-usuario-incorreto input , .login-container-senha input, .login-container-senha-incorreta input{
+    width: 295px;
+    height: 47px;
+    margin-left: 10px;
+    border: none;
+    background: #D9D9D9;
+    border-radius: 25px;
+    
+    font-weight: 700;
+    padding-left:25px;
+    margin-bottom: 24px;
+
+}
+
+.login-container-usuario ::placeholder, .login-container-senha ::placeholder{
+    font-weight: 700;
+    size: 12px;
+    line-height: 16px;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    
+    color: #F7AC20;
+    
+}
+
+
+.login-container-usuario input:focus, .login-container-usuario-incorreto input:focus, .login-container-senha input:focus{
+    outline: 0;
+    
+}
+
+/*container - informações incorretas */
+
+.login-container-incorreto{
+    
+    width: 350px;
+    height: 545px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #E8E8E8;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+
+}
+
+.login-container-title-incorreto{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 73px;
+    padding-top: 46px;
+    color: #BF0404;
+}
+
+.login-container-senha-incorreta ::placeholder{
+    color: #BF0404;
+}
+
+.login-container-info-usuarioIncorreto, .login-container-info-senhaIncorreta{
+    margin-top: 48px;
+    padding-bottom: 166px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #BF0404;
+
+}
+
+.login-info-semcad{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin-top: 40px;
+    color: #BF0404;
+}
+
+
+/*tela cadastro*/
+.body-cadastro{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -50px;
+    height: calc(100vh - 78px);
+  
+}
+
+.container-cadastro{
+    width: 355px;
+    height: 611px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #E8E8E8;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-weight: 800;
+}
+
+
+.cadastro-item .nome{
+    height: 50px;
+    margin-top: 41px;
+}
+.cad-nome p{
+    width: 295px;
+    padding-left: 15px;
+    margin-bottom: -1px;
+    padding-top: 39px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #F7AC20;
+
+}
+.cad input{
+    width: 295px;
+    height: 47px;
+    
+    border: none;
+    background: #D9D9D9;
+    border-radius: 25px;
+    margin-bottom: -20px;
+    font-weight: 700;
+    padding-left:25px;
+
+}
+
+.cad .cad-dataNasc input {
+    width: 290px;
+
+} 
+
+.cad input:focus{
+    outline: 0;
+}
+
+
+.cad button{
+    margin-top: 40px;
+}
+
+.container-cadastro-image{
+    width: 30vw;
+}
+.container-cadastro-image img{
+    width: 100%;
+}
+
+.container-cadastro-erroMatricula{
+    width: 400px;
+    height: 400px;
+    margin-top: 125px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #E8E8E8;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+}
+
+.container-cadastro-erroMatricula-title{
+    width: 327px;
+    height: 82px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height:82px;
+    display: flex;
+    align-items: center;
+
+    color: #BF0404;
+
+}
+
+.container-cadastro-erroMatricula-desc{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #383838;
+}
+
+.bolinha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    margin-left: 39px;
+    margin-bottom: 41px;
+    background-color:#BF0404;
+}
+
+/*preloader*/
+.container-preloader{
+    width: 100vw;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    color: #BF0404;
+}
+
+.container-preloader img{
+    width: 560px;
+}
+
+/*utilidades*/
+
+/*botões grandes*/
+
+.btn-grande-amarelo button{
+    border: none;
+    width: 295px;
+    height: 47px;
+    background: #F7AC20;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 47px;
+    color: #FFFFFF;
+    
+}

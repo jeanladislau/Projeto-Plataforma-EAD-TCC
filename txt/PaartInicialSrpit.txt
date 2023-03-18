@@ -1,0 +1,74 @@
+CREATE TABLE TBLMAT(
+	IDUSU INT PRIMARY KEY auto_increment,
+	MATRICULA INT UNIQUE NOT NULL ,
+    NOME_COMP VARCHAR(100) NOT NULL,
+    TIPUSU INT NOT NULL,
+    DT_CAD DATE NOT NULL
+);
+
+INSERT INTO TBLMAT  (MATRICULA,NOME_COMP,TIPUSU,DT_CAD) VALUES  (202110038,'Valdirene Pereira da Silva',1,sysdate());/*tipo de usuário 1 ADM*/
+INSERT INTO TBLMAT  (MATRICULA,NOME_COMP,TIPUSU,DT_CAD) VALUES  (202110040,'Jotinha dos Santos',2,sysdate());/*tipo de usuário 2 PROFESSOR*/
+INSERT INTO TBLMAT  (MATRICULA,NOME_COMP,TIPUSU,DT_CAD) VALUES  (202110077,'Mariana Leonel Alves',3,sysdate());/*tipo de usuário 3 ALUNO*/
+/*Primeiro os dados são inseridos pelo adm na tblmat com os dados principais*/
+
+SELECT * FROM TBLMAT;/*Verificar dados inseridos*/
+
+CREATE TABLE TBLUSU(
+	IDUSU INT PRIMARY KEY,
+    TIPUSU INT NOT NULL ,
+    USUARIO VARCHAR(80) NOT NULL,
+    NOME_COMP VARCHAR(100) NOT NULL,
+    EMAIL VARCHAR(100) NOT NULL,
+    TELEFONE varchar(11),
+    MATRICULA INT NOT NULL,
+    DT_NASC DATE NOT NULL,
+    DT_CAD DATE NOT NULL
+);
+/*
+Após isso o adm fala pra o usuario ir até o site terminar a matricula e pra finalizar validar com a matricula
+quando a pessoa for cadastrada o usuario vai ser um insert da tblmat pegsando a primeira letra no primeiro nome e ultimo nome */
+
+INSERT INTO TBLUSU (TIPUSU,USUARIO,NOME_COMP,EMAIL,TELEFONE,MATRICULA,DT_NASC,DT_CAD)  select  mat.tipusu,
+																			CONCAT(  LEFT (mat.NOME_COMP, 1),
+																			substring_index(mat.NOME_COMP,' ',-1)),
+                                                                            'Valdirene Pereira da Silva',
+                                                                            'vavasailva@gmail.com',
+                                                                            '62992462613',
+                                                                            mat.matricula,
+                                                                            '30-08-1999',
+                                                                            sysdate()
+																			from tblmat mat
+                                                                            where mat.matricula = 202110037 ;
+
+INSERT INTO TBLUSU (TIPUSU,USUARIO,NOME_COMP,EMAIL,TELEFONE,MATRICULA,DT_NASC,DT_CAD)  select  mat.tipusu,
+																			CONCAT(  LEFT (mat.NOME_COMP, 1),
+																			substring_index(mat.NOME_COMP,' ',-1)),
+                                                                            'Jotinha dos Santos',
+                                                                            'jtota@gmail.com',
+                                                                            '62992449836',
+                                                                            mat.matricula,
+                                                                            '01-01-2000',
+                                                                            sysdate()
+																			from tblmat mat
+                                                                            where mat.matricula = 202110040 ;
+                                                                            
+INSERT INTO TBLUSU (TIPUSU,USUARIO,NOME_COMP,EMAIL,TELEFONE,MATRICULA,DT_NASC,DT_CAD)  select  mat.tipusu,
+																			CONCAT(  LEFT (mat.NOME_COMP, 1),
+																			substring_index(mat.NOME_COMP,' ',-1)),
+                                                                            'Mariana Leonel Alves',
+                                                                            'mariazinha@gmail.com',
+                                                                            '62991518928',
+                                                                            mat.matricula,
+                                                                            '04-06-1997',
+                                                                            sysdate()
+																			from tblmat mat
+                                                                            where mat.matricula = 202110077 ;   
+/*ATENÇÃO, SÓ IRA INSERIR NA TBLUSU se a matricula informada pelo usuário estiver na TBLMAT*/
+/*após se cadastrar o usuario irá receber uma mensagem informando que foi aprovado informando usuario / senha de autenticação para fazer login*/
+
+/*select para printar na tela dados para usuário fazer login*/ 
+SELECT u.usuario,convert(u.dt_nasc,char) from tblusu u ;
+/*select pra conferir dados e fazer login*/
+select usuario,dt_nasc from tblusu;
+
+SELECT * FROM TBLUSU;/*consultar tblusu*/
