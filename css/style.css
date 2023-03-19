@@ -11,6 +11,133 @@ header{
     background: #F21D2F;
 }
 
+.navbar{
+    background-color: #F21D2F;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 11px 12px -1px rgba(0, 0, 0, 0.115);
+
+}
+
+.navbar-login{
+    background-color: #F21D2F;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 11px 12px -1px rgba(0, 0, 0, 0.115);
+
+}
+
+.navbar-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container-login ul{
+    margin-top: 10px;
+}
+
+.navbar-container ul{
+    margin-top: 10px;
+}
+
+
+.navbar-login .h-navbar-nav-login li a.navbar-item-active{
+    color: #F21D2F;
+}
+
+.navbar .h-navbar-nav li a.navbar-item-active{
+    color: #F7AC20;
+}
+
+.navbar .h-navbar-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 70px;
+    font-weight: bold;
+}
+
+.navbar-login .h-navbar-nav-login li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 70px;
+    font-weight: bold;
+}
+
+.navbar .navbar-button{
+    border-radius: 11px;
+    width: 110px;
+    height: 45px;
+    font-size: 12px;
+    letter-spacing: 3%;
+    color: #F21D2F;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar-login .navbar-button-login{
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    font-size: 12px;
+    letter-spacing: 3%;
+    color: #F21D2F;
+    font-weight: bold;
+    text-align: center;
+    background-color: #BF0404;
+}
+
+.navbar-login .navbar-button-login img{
+    height: 80%;
+    width: 80%;
+
+}
+
+.navbar-login .navbar-button a{
+    color: #F21D2F;
+    text-decoration: none;
+}
+
+.navbar .navbar-button::before, .navbar .navbar-button a:hover{
+    color: #F21D2F;
+}
+
+.navbar .navbar-button{
+    border-radius: 11px;
+    width: 110px;
+    height: 45px;
+    font-size: 12px;
+    letter-spacing: 3%;
+    color: #F21D2F;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar .navbar-button a{
+    color: #F21D2F;
+    text-decoration: none;
+}
+
+.navbar .navbar-button::before, .navbar .navbar-button a:hover{
+    color: #F21D2F;
+}
+
 .container-tela{
     overflow: hidden;
 }
@@ -40,13 +167,13 @@ header{
     align-items: center;
     
     width: 100%;
-    height: 90px;
+    height: 80px;
     left: 0px;
     top: -10px;
     padding-left: 18px;
     padding-right: 18px;
     vertical-align: middle;
-    box-shadow: 0px 11px 12px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 11px 12px -1px rgba(0, 0, 0, 0.115);
 }
 
 .login-navbar-logo{
@@ -74,27 +201,36 @@ header{
     color: #F7AC20;
 }
 
+.navbar .navbar-button{
+    border-radius: 11px;
+    width: 110px;
+    height: 45px;
+    font-size: 12px;
+    letter-spacing: 3%;
+    color: #F21D2F;
+    font-weight: bold;
+    text-align: center;
+}
+
 .login-navbar-btncadastro{
-    width: 150px;
-    height: 50px;
+    width: 110px;
+    height: 45px;
     left: 1113px;
     top: 15px;
     
-    background: #D9D9D9;
+    background: #e8e8e8;
     border-radius: 11px;
     
     
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 12px;
     /* identical to box height */
 
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
 
     color: #F21D2F;
 }
@@ -374,9 +510,60 @@ header{
     width: 560px;
 }
 
+.h-adm{
+    background-color: #383838;
+    height: 55px;
+    color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-professor{
+    background-color: #F7AC20;
+    height: 55px;
+    color: #383838;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-aluno{
+    background-color: #355268;
+    height: 55px;
+    color: #fff;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------------------------- home -----------------------------*/
+
+.h-container-slider{
+    background-color: #383838;
+}
+
 /*utilidades*/
+.mg-15-esquerda{
+    margin-left: 15px;
+}
+.mg-15-direita{
+    margin-right: 15px;
+}
+.mg-15-cima{
+    margin-top: 15px;
+}
+.mg-15-baixo{
+    margin-bottom: 15px;
+}
 
 /*botões grandes*/
+
+button{
+    border: none;
+    padding: 10px;
+}
 
 .btn-grande-amarelo button{
     border: none;
@@ -385,6 +572,7 @@ header{
     background: #F7AC20;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 25px;
     font-style: normal;
     font-weight: 600;
